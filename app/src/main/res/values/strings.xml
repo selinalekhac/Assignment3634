@@ -10,4 +10,7 @@
     <string name="wronganswer1">Wrong Answer 1</string>
     <string name="wronganswer2">Wrong Answer 2</string>
     <string name="wronganswer3">Wrong Answer 3</string>
+    <string name="checkanswer">Check Answer</string>
+    <string name="Results">Results</string>
+    <string name="youranswer">Your Answer</string>
 </resources>

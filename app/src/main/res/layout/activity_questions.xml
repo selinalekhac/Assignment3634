@@ -34,52 +34,114 @@
         android:layout_height="51dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:text="@string/question"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contextPassage_id" />
 
-    <TextView
-        android:id="@+id/correctAnswer_id"
+<!--    <TextView-->
+<!--        android:id="@+id/correctAnswer_id"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="40dp"-->
+<!--        android:layout_marginLeft="40dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="@string/correctAnswer"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/question_id" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/wronganswer1_id"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="40dp"-->
+<!--        android:layout_marginLeft="40dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="@string/wronganswer1"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/correctAnswer_id" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/wronganswer2_id"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="40dp"-->
+<!--        android:layout_marginLeft="40dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="@string/wronganswer2"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/wronganswer1_id" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/wronganswer3_id"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="40dp"-->
+<!--        android:layout_marginLeft="40dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="@string/wronganswer3"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/wronganswer2_id" />-->
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/correctAnswer"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question_id" />
+        app:layout_constraintTop_toBottomOf="@+id/question_id">
+
+        <RadioButton
+            android:id="@+id/correctAnswer_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/correctAnswer"/>
+
+        <RadioButton
+            android:id="@+id/wronganswer1_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wronganswer1"/>
+
+        <RadioButton
+            android:id="@+id/wronganswer2_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wronganswer2"/>
+
+        <RadioButton
+            android:id="@+id/wronganswer3_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wronganswer3"/>
+
+<!--            android:onClick="checkAnswer"-->
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/checkanswer_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/checkanswer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <TextView
-        android:id="@+id/wronganswer1_id"
+        android:id="@+id/results_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/wronganswer1"
+        android:layout_marginTop="50dp"
+        android:text="@string/Results"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correctAnswer_id" />
+        app:layout_constraintTop_toBottomOf="@+id/checkanswer_id" />
 
-    <TextView
-        android:id="@+id/wronganswer2_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/wronganswer2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wronganswer1_id" />
-
-    <TextView
-        android:id="@+id/wronganswer3_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/wronganswer3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wronganswer2_id" />
 </androidx.constraintlayout.widget.ConstraintLayout>

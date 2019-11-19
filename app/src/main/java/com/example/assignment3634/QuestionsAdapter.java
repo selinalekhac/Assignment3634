@@ -3,6 +3,8 @@ package com.example.assignment3634;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -32,10 +34,10 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
         holder.questionIDTextView.setText(Integer.toString(questionsAtPosition.getQuestionID()));
         holder.contextPassageTextView.setText(questionsAtPosition.getContextPassage());
         holder.questionTextView.setText(questionsAtPosition.getQuestion());
-        holder.correctAnswerTextView.setText(questionsAtPosition.getCorrectAnswer());
-        holder.wrongAnswer1TextView.setText(questionsAtPosition.getWrongAnswer1());
-        holder.wrongAnswer2TextView.setText(questionsAtPosition.getWrongAnswer2());
-        holder.wrongAnswer3TextView.setText(questionsAtPosition.getWrongAnswer3());
+        holder.correctAnswerRadioButton.setText(questionsAtPosition.getCorrectAnswer());
+        holder.wrongAnswer1RadioButton.setText(questionsAtPosition.getWrongAnswer1());
+        holder.wrongAnswer2RadioButton.setText(questionsAtPosition.getWrongAnswer2());
+        holder.wrongAnswer3RadioButton.setText(questionsAtPosition.getWrongAnswer3());
 
     } // onBindViewHolder bracket
 
@@ -50,10 +52,10 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
         public TextView questionIDTextView;
         public TextView contextPassageTextView;
         public TextView questionTextView;
-        public TextView correctAnswerTextView;
-        public TextView wrongAnswer1TextView;
-        public TextView wrongAnswer2TextView;
-        public TextView wrongAnswer3TextView;
+        public RadioButton correctAnswerRadioButton;
+        public RadioButton wrongAnswer1RadioButton;
+        public RadioButton wrongAnswer2RadioButton;
+        public RadioButton wrongAnswer3RadioButton;
 
         public QuestionsViewHolder( View v) {
             super(v);
@@ -61,10 +63,10 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
             questionIDTextView = v.findViewById(R.id.questionID_id);
             contextPassageTextView = v.findViewById(R.id.contextPassage_id);
             questionTextView = v.findViewById(R.id.question_id);
-            correctAnswerTextView = v.findViewById(R.id.correctAnswer_id);
-            wrongAnswer1TextView = v.findViewById(R.id.wronganswer1_id);
-            wrongAnswer2TextView = v.findViewById(R.id.wronganswer2_id);
-            wrongAnswer3TextView = v.findViewById(R.id.wronganswer3_id);
+            correctAnswerRadioButton = v.findViewById(R.id.correctAnswer_id);
+            wrongAnswer1RadioButton = v.findViewById(R.id.wronganswer1_id);
+            wrongAnswer2RadioButton = v.findViewById(R.id.wronganswer2_id);
+            wrongAnswer3RadioButton = v.findViewById(R.id.wronganswer3_id);
 
         }
     }

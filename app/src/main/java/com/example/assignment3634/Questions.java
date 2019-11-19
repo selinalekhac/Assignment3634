@@ -3,6 +3,12 @@ package com.example.assignment3634;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class Questions extends AppCompatActivity {
 
@@ -13,12 +19,40 @@ public class Questions extends AppCompatActivity {
     private String wrongAnswer1; //an incorrect answer
     private String wrongAnswer2; // another incorrect answer
     private String wrongAnswer3; // another incorrect answer
+    private RadioGroup radioGroup;
+    private RadioButton radioButton;
+    private TextView textView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
-    }
+
+//        radioGroup = findViewById(R.id.radioGroup);
+//        textView = findViewById(R.id.results_id);
+//
+//        Button buttonCheckAnswer = findViewById(R.id.checkanswer_id);
+//        buttonCheckAnswer.setOnClickListener(new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View v) {
+//                int radioID = radioGroup.getCheckedRadioButtonId();
+//                radioButton = findViewById(radioID);
+//
+//                textView.setText(R.string.youranswer);
+//            }
+//        });
+
+    } // onCreate method bracket
+
+//    public void checkAnswer(){
+//        int radioID = radioGroup.getCheckedRadioButtonId();
+//        radioButton = findViewById(radioID);
+//        Toast.makeText(this, "Selected Radio Button: " + radioButton.getText(), Toast.LENGTH_SHORT).show();
+//    }
+
+
 
     public Questions (int questionID, String contextPassage, String question, String correctAnswer, String wrongAnswer1, String wrongAnswer2, String wrongAnswer3){
         this.questionID = questionID;
@@ -80,4 +114,10 @@ public class Questions extends AppCompatActivity {
         this.wrongAnswer3 = wrongAnswer3;
     }
 
+    public void checkAnswer(View view) {
+//
+//        int radioID = radioGroup.getCheckedRadioButtonId();
+//        radioButton = findViewById(radioID);
+        Toast.makeText(this, "You have selected: ", Toast.LENGTH_SHORT).show();
+    }
 }// this curly bracket is for the public class Questions extends App Compat
