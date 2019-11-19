@@ -1,4 +1,4 @@
-package com.example.assignment3634;
+package com.example.assignment3634.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.assignment3634.QuestionsAdapter;
+import com.example.assignment3634.QuestionsAndAnswersDatabase;
+import com.example.assignment3634.R;
 
 
 public class FragmentQuestionRecycler extends Fragment {
