@@ -1,6 +1,7 @@
 package com.example.assignment3634;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -25,6 +26,8 @@ public class FragmentQuestionRecycler extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
         View view = inflater.inflate(R.layout.fragment_fragment_question_recycler, container, false);
         recyclerView = view.findViewById(R.id.recyclerview_questions_main);
 
@@ -37,6 +40,8 @@ public class FragmentQuestionRecycler extends Fragment {
 
         return view;
     } // this curly bracket is for the onCreateView
+
+
 
 
 }
