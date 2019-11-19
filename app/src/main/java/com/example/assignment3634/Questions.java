@@ -115,9 +115,9 @@ public class Questions extends AppCompatActivity {
     }
 
     public void checkAnswer(View view) {
-//
-//        int radioID = radioGroup.getCheckedRadioButtonId();
-//        radioButton = findViewById(radioID);
+
+        int radioID = radioGroup.getCheckedRadioButtonId();
+        radioButton = findViewById(radioID);
         Toast.makeText(this, "You have selected: ", Toast.LENGTH_SHORT).show();
     }
 }// this curly bracket is for the public class Questions extends App Compat
