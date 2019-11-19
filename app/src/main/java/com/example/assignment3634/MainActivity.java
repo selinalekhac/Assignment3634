@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Navigation Bar Setup
-        bottomNavigationView = findViewById(R.id.nav_view);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     swapFragment(fragment);
                     return true;
                 } else if (menuItem.getItemId() == R.id.activities_page) {
-                    Fragment fragment = new ActivitiesFragment();
+                    Fragment fragment = new Fragment();
                     swapFragment(fragment);
                     return true;
                 }
@@ -59,4 +59,4 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-}
+
