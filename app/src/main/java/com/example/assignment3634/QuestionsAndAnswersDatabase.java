@@ -29,7 +29,7 @@ public class QuestionsAndAnswersDatabase {
                 "Depressed",
                 "Confused",
                 "Angery",
-                4
+                1
         ));
 
         questions.put(2, new Questions(

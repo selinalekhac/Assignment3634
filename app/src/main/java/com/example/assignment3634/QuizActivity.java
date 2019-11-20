@@ -76,8 +76,8 @@ public class QuizActivity extends AppCompatActivity {
         textColorDefaultRb = rb1.getTextColors();
 
 
-        QuestionsAndAnswersDatabase dbHelper = new QuestionsAndAnswersDatabase();
-        questionList = dbHelper.getAllQuestions();
+        QuestionsAndAnswersDatabase questionsDatabase = new QuestionsAndAnswersDatabase();
+        questionList = questionsDatabase.getAllQuestions();
         questionCountTotal = questionList.size();
         //Collections.shuffle(questionList);
 
@@ -231,8 +231,7 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void finishQuiz(){
-
-            finish();
+        finish();
 
     }
 

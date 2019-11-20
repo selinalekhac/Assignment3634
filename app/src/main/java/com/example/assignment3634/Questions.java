@@ -18,7 +18,7 @@ public class Questions extends AppCompatActivity {
     private String answer2; //an incorrect answer
     private String answer3; // another incorrect answer
     private String answer4; // another incorrect answer
-        private int answerNr;
+    private int answerNr;
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     private TextView textView;
