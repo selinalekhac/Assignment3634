@@ -13,7 +13,7 @@
         android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="32dp"
-        android:text="Quiz Score"
+        android:text="Quiz Score: 0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,8 +55,8 @@
 
     <RadioGroup
         android:id="@+id/radio_group"
-        android:layout_width="157dp"
-        android:layout_height="220dp"
+        android:layout_width="196dp"
+        android:layout_height="210dp"
         android:layout_centerVertical="true"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
@@ -79,7 +79,7 @@
 
         <RadioButton
             android:id="@+id/radio_button1"
-            android:layout_width="wrap_content"
+            android:layout_width="139dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="54dp"
             android:layout_marginLeft="54dp"
@@ -90,7 +90,7 @@
 
         <RadioButton
             android:id="@+id/radio_button2"
-            android:layout_width="wrap_content"
+            android:layout_width="139dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="54dp"
             android:layout_marginLeft="54dp"
@@ -101,7 +101,7 @@
 
         <RadioButton
             android:id="@+id/radio_button3"
-            android:layout_width="wrap_content"
+            android:layout_width="139dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="54dp"
             android:layout_marginLeft="54dp"
@@ -112,7 +112,7 @@
 
         <RadioButton
             android:id="@+id/radio_button4"
-            android:layout_width="wrap_content"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="54dp"
             android:layout_marginLeft="54dp"

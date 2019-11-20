@@ -14,13 +14,11 @@ public class Questions extends AppCompatActivity {
     private int questionID;  //unique identifier for questions
     private String contextPassage; // Paragraph of context
     private String question; // question they will be answering
-    private String correctAnswer; //correct answer
-    private String wrongAnswer1; //an incorrect answer
-    private String wrongAnswer2; // another incorrect answer
-
-
-
-    private String wrongAnswer3; // another incorrect answer
+    private String answer1; //correct answer
+    private String answer2; //an incorrect answer
+    private String answer3; // another incorrect answer
+    private String answer4; // another incorrect answer
+        private int answerNr;
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     private TextView textView;
@@ -57,14 +55,16 @@ public class Questions extends AppCompatActivity {
 
 
 
-    public Questions (int questionID, String contextPassage, String question, String correctAnswer, String wrongAnswer1, String wrongAnswer2, String wrongAnswer3){
+    public Questions (int questionID, String contextPassage, String question, String answer1, String answer2, String answer3, String answer4, int answerNr){
         this.questionID = questionID;
 //        this.contextPassage = contextPassage;
         this.question = question;
-        this.correctAnswer = correctAnswer;
-        this.wrongAnswer1 = wrongAnswer1;
-        this.wrongAnswer2 = wrongAnswer2;
-        this.wrongAnswer3 = wrongAnswer3;
+        this.answer1= answer1;
+        this.answer2= answer2;
+        this.answer3= answer3;
+        this.answer4= answer4;
+        this.answerNr = answerNr;
+
     }
 
     // getter and setters
@@ -89,32 +89,76 @@ public class Questions extends AppCompatActivity {
         this.question = question;
     }
 
-    public String getCorrectAnswer(){
-        return correctAnswer;
-    }
-    public void setCorrectAnswer(String correctAnswer) {
-        this.correctAnswer = correctAnswer;
+//    public String getCorrectAnswer(){
+//        return correctAnswer;
+//    }
+//    public void setCorrectAnswer(String correctAnswer) {
+//        this.correctAnswer = correctAnswer;
+//    }
+
+
+    public String getAnswer1() {
+        return answer1;
     }
 
-    public String getWrongAnswer1() {
-        return wrongAnswer1;
-    }
-    public void setWrongAnswer1(String wrongAnswer1) {
-        this.wrongAnswer1 = wrongAnswer1;
+    public void setAnswer1(String answer1) {
+        this.answer1 = answer1;
     }
 
-    public String getWrongAnswer2() {
-        return wrongAnswer2;
-    }
-    public void setWrongAnswer2(String wrongAnswer2) {
-        this.wrongAnswer2 = wrongAnswer2;
+    public String getAnswer2() {
+        return answer2;
     }
 
-    public String getWrongAnswer3() {
-        return wrongAnswer3;
+    public void setAnswer2(String answer2) {
+        this.answer2 = answer2;
     }
-    public void setWrongAnswer3(String wrongAnswer3) {
-        this.wrongAnswer3 = wrongAnswer3;
+
+    public String getAnswer3() {
+        return answer3;
+    }
+
+    public void setAnswer3(String answer3) {
+        this.answer3 = answer3;
+    }
+
+    public String getAnswer4() {
+        return answer4;
+    }
+
+    public void setAnswer4(String answer4) {
+        this.answer4 = answer4;
+    }
+
+    public int getAnswerNr() {
+        return answerNr;
+    }
+
+    public void setAnswerNr(int answerNr) {
+        this.answerNr = answerNr;
+    }
+
+    public RadioGroup getRadioGroup() {
+        return radioGroup;
+    }
+
+    public void setRadioGroup(RadioGroup radioGroup) {
+        this.radioGroup = radioGroup;
+    }
+
+    public RadioButton getRadioButton() {
+        return radioButton;
+    }
+
+    public void setRadioButton(RadioButton radioButton) {
+        this.radioButton = radioButton;
+    }
+
+    public TextView getTextView() {
+        return textView;
+    }
+
+    public void setTextView(TextView textView) {
+        this.textView = textView;
     }
 
     public void checkAnswer(View view) {

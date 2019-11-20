@@ -28,7 +28,8 @@ public class QuestionsAndAnswersDatabase {
                 "Sad",
                 "Depressed",
                 "Confused",
-                "Angery"
+                "Angery",
+                4
         ));
 
         questions.put(2, new Questions(
@@ -39,7 +40,9 @@ public class QuestionsAndAnswersDatabase {
                 "Excited",
                 "Nervous",
                 "Moody",
-                "Broody"
+                "Broody",
+                1
+
         ));
 
         questions.put(3, new Questions(
@@ -55,7 +58,8 @@ public class QuestionsAndAnswersDatabase {
                 "Elated",
                 "Happy",
                 "Excited",
-                "Cheerful"
+                "Cheerful",
+                1
         ));
 
         questions.put(4, new Questions(
@@ -71,7 +75,8 @@ public class QuestionsAndAnswersDatabase {
                 "Hopeful",
                 "Keen",
                 "Dreamy",
-                "Obssessed"
+                "Obssessed",
+                1
         ));
 
         questions.put(5, new Questions(
@@ -87,7 +92,8 @@ public class QuestionsAndAnswersDatabase {
                 "Panicked",
                 "Anxious",
                 "Overwhelmed",
-                "Stressed"
+                "Stressed",
+                1
         ));
 
     } //this curly bracket is for static

@@ -6,8 +6,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.assignment3634.Fragments.FragmentQuestionRecycler;
 import com.example.assignment3634.Fragments.HomepageFragment;
@@ -17,8 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         Fragment fragment = new HomepageFragment();
         swapFragment(fragment);
+
 
 
         //Navigation Bar Setup
@@ -42,14 +44,16 @@ public class MainActivity extends AppCompatActivity {
                     Fragment fragment = new FragmentQuestionRecycler();
                     swapFragment(fragment);
                     return true;
+                } else if (menuItem.getItemId() ==R.id.dictionary_page){
+                    Fragment fragment = new DictionaryFragment();
+                    swapFragment(fragment);
+                    return true;
                 }
 
                 return false;
             }
         });
     }
-
-
 
 
         private void swapFragment(Fragment fragment){

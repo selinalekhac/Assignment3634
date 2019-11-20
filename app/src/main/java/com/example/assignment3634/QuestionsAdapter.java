@@ -34,10 +34,11 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
         holder.questionIDTextView.setText(Integer.toString(questionsAtPosition.getQuestionID()));
        // holder.contextPassageTextView.setText(questionsAtPosition.getContextPassage());
         holder.questionTextView.setText(questionsAtPosition.getQuestion());
-        holder.correctAnswerRadioButton.setText(questionsAtPosition.getCorrectAnswer());
-        holder.wrongAnswer1RadioButton.setText(questionsAtPosition.getWrongAnswer1());
-        holder.wrongAnswer2RadioButton.setText(questionsAtPosition.getWrongAnswer2());
-        holder.wrongAnswer3RadioButton.setText(questionsAtPosition.getWrongAnswer3());
+        holder.correctAnswerRadioButton.setText(questionsAtPosition.getAnswer4());
+        holder.wrongAnswer1RadioButton.setText(questionsAtPosition.getAnswer1());
+        holder.wrongAnswer2RadioButton.setText(questionsAtPosition.getAnswer2());
+        holder.wrongAnswer3RadioButton.setText(questionsAtPosition.getAnswer3());
+
 
     } // onBindViewHolder bracket
 
@@ -50,7 +51,7 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
 
         public View view;
         public TextView questionIDTextView;
-        public TextView contextPassageTextView;
+//        public TextView contextPassageTextView;
         public TextView questionTextView;
         public RadioButton correctAnswerRadioButton;
         public RadioButton wrongAnswer1RadioButton;
@@ -61,7 +62,7 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
             super(v);
             view = v;
             questionIDTextView = v.findViewById(R.id.questionID_id);
-            contextPassageTextView = v.findViewById(R.id.contextPassage_id);
+//            contextPassageTextView = v.findViewById(R.id.contextPassage_id);
             questionTextView = v.findViewById(R.id.question_id);
             correctAnswerRadioButton = v.findViewById(R.id.correctAnswer_id);
             wrongAnswer1RadioButton = v.findViewById(R.id.wronganswer1_id);

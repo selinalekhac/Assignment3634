@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -14,10 +15,18 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.assignment3634.Fragments.HomepageFragment;
+
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 public class QuizActivity extends AppCompatActivity {
+
+    //Timer Variables
+    //for each question we set 10 minutes
+    private static final long COUNTDOWN_IN_MILLIS = 30000;
+
 
     private TextView textViewQuestion;
     private TextView textViewScore;
@@ -30,8 +39,10 @@ public class QuizActivity extends AppCompatActivity {
     private RadioButton rb4;
     private Button buttonConfirmNext;
 
-
     private ColorStateList textColorDefaultRb;
+
+    private CountDownTimer countDownTimer;
+    private long timeLeftInMilliSeconds;
 
 
     private List<Questions> questionList;
@@ -39,9 +50,11 @@ public class QuizActivity extends AppCompatActivity {
     private int questionCountTotal;
     private Questions currentQuestion;
 
-    private int score;
+
+    public int score;
     // decides what happens after the question. Answered or not answered
     private boolean answered;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +75,11 @@ public class QuizActivity extends AppCompatActivity {
         //save default color in variable
         textColorDefaultRb = rb1.getTextColors();
 
+
         QuestionsAndAnswersDatabase dbHelper = new QuestionsAndAnswersDatabase();
         questionList = dbHelper.getAllQuestions();
         questionCountTotal = questionList.size();
-        Collections.shuffle(questionList);
+        //Collections.shuffle(questionList);
 
         showNextQuestion();
         //lock button
@@ -86,6 +100,7 @@ public class QuizActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     private void showNextQuestion(){
@@ -99,11 +114,13 @@ public class QuizActivity extends AppCompatActivity {
         if(questionCounter< questionCountTotal){
             currentQuestion = questionList.get(questionCounter);
 
+
+        //setting questions to the assigned variables on screen
             textViewQuestion.setText(currentQuestion.getQuestion());
-            rb1.setText(currentQuestion.getWrongAnswer1());
-            rb2.setText(currentQuestion.getWrongAnswer2());
-            rb3.setText(currentQuestion.getWrongAnswer3());
-            rb4.setText(currentQuestion.getCorrectAnswer());
+            rb1.setText(currentQuestion.getAnswer1());
+            rb2.setText(currentQuestion.getAnswer2());
+            rb3.setText(currentQuestion.getAnswer3());
+            rb4.setText(currentQuestion.getAnswer4());
 
             questionCounter++;
             textViewQuestionCount.setText("Question: "+ questionCounter + "/" + questionCountTotal);
@@ -111,25 +128,67 @@ public class QuizActivity extends AppCompatActivity {
             answered = false;
             buttonConfirmNext.setText("Confirm");
 
+            //start countdown when we show first question
+
+            //setting timer to 30 seconds
+            timeLeftInMilliSeconds = COUNTDOWN_IN_MILLIS;
+            startCountDown();
         } else{
             finishQuiz();
         }
 
     }
+    //method to start count down timer
+    private void startCountDown(){
+        countDownTimer = new CountDownTimer(timeLeftInMilliSeconds, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+            timeLeftInMilliSeconds = millisUntilFinished;
+            updateCountDownText();
+            }
+
+            @Override
+            public void onFinish() {
+                //To make sure 0:00 seconds is displayed on timer when it runs out
+                timeLeftInMilliSeconds =0;
+                updateCountDownText();
+                checkAnswer();
+            }
+        }.start();
+    }
+    //update count down text method. Will be called everytime onTick method is called which is 1 every second
+    private void updateCountDownText(){
+        // need to get seconds
+        int minutes = (int)(timeLeftInMilliSeconds/1000) / 60;
+        // we only get what is left after dividing by 60
+        int seconds = (int)(timeLeftInMilliSeconds/1000)% 60;
+
+        String timeFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds);
+
+        textViewCountDown.setText(timeFormatted);
+
+
+    }
     private void checkAnswer(){
         answered = true;
+        //if user answers the question correctly, the timer needs to stop
+        countDownTimer.cancel();
         //return the id of the button in variable 'rbSelected'
         RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
         //turn index of radiobutton into an integer
-        int answerNr = rbGroup.indexOfChild(rbSelected) + 1;
+        int answerNr = rbGroup.indexOfChild(rbSelected)+1;
         //check if the selected answer is correct by matching it with the correct index value
-        if(answerNr ==currentQuestion.getQuestionID()){
-            score++;
-            textViewScore.setText("Score: " + score);
+        if(answerNr == currentQuestion.getAnswerNr()){
 
+            score++;
+            textViewScore.setText("Quiz Score: " + score);
+//
         }
+
+
         //outside as you always want to show solution
         showSolution();
+
     }
     //changing the colour of the buttons according to what is correct and what is wrong
     private void showSolution(){
@@ -139,7 +198,7 @@ public class QuizActivity extends AppCompatActivity {
         rb4.setTextColor(Color.RED);
         //change the correct button to Green to signify correct answer
 
-        switch(currentQuestion.getQuestionID()){
+        switch(currentQuestion.getAnswerNr()){
             case 1:
                 rb1.setTextColor(Color.GREEN);
                 textViewQuestion.setText("Answer 1 is correct");
@@ -158,6 +217,8 @@ public class QuizActivity extends AppCompatActivity {
             case 4:
                 rb4.setTextColor(Color.GREEN);
                 textViewQuestion.setText("Answer 4 is correct");
+
+
         }
 
         // Now we need to change the button back to default colour for next question
@@ -170,9 +231,32 @@ public class QuizActivity extends AppCompatActivity {
     }
 
     private void finishQuiz(){
-        finish();
+
+            finish();
+
     }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        if(countDownTimer != null){
+            countDownTimer.cancel();
+        }
+
     }
+
+//    public void sendData(){
+//        Bundle bundle = new Bundle();
+//        bundle.putInt("SCORE_KEY", Integer.valueOf(score) );
+//
+//        HomepageFragment myFragment = new HomepageFragment();
+//        myFragment.setArguments(bundle);
+//
+//        getSupportFragmentManager().beginTransaction().replace(R.id.container, myFragment).commit();
+//    }
+
+    }
+
 
 
 

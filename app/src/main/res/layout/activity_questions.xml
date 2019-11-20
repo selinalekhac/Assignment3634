@@ -17,27 +17,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/contextPassage_id"
-        android:layout_width="335dp"
-        android:layout_height="174dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/contextpassage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionID_id" />
+<!--    <TextView-->
+<!--        android:id="@+id/contextPassage_id"-->
+<!--        android:layout_width="335dp"-->
+<!--        android:layout_height="174dp"-->
+<!--        android:layout_marginStart="40dp"-->
+<!--        android:layout_marginLeft="40dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:text="@string/contextpassage"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/questionID_id" />-->
 
     <TextView
         android:id="@+id/question_id"
-        android:layout_width="338dp"
-        android:layout_height="51dp"
+        android:layout_width="331dp"
+        android:layout_height="190dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="@string/question"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contextPassage_id" />
+        app:layout_constraintTop_toBottomOf="@+id/questionID_id" />
 
 <!--    <TextView-->
 <!--        android:id="@+id/correctAnswer_id"-->
