@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -18,11 +17,15 @@ public class Questions extends AppCompatActivity {
     private String correctAnswer; //correct answer
     private String wrongAnswer1; //an incorrect answer
     private String wrongAnswer2; // another incorrect answer
+
+
+
     private String wrongAnswer3; // another incorrect answer
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     private TextView textView;
 
+    public Questions() {}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,4 +123,5 @@ public class Questions extends AppCompatActivity {
         radioButton = findViewById(radioID);
         Toast.makeText(this, "You have selected: ", Toast.LENGTH_SHORT).show();
     }
+
 }// this curly bracket is for the public class Questions extends App Compat

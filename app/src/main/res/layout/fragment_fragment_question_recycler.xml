@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FragmentQuestionRecycler">
+    tools:context=".Fragments.FragmentQuestionRecycler">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_questions_main"
