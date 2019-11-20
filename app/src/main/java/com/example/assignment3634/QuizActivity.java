@@ -27,6 +27,7 @@ public class QuizActivity extends AppCompatActivity {
     private RadioButton rb1;
     private RadioButton rb2;
     private RadioButton rb3;
+    private RadioButton rb4;
     private Button buttonConfirmNext;
 
 
@@ -55,6 +56,7 @@ public class QuizActivity extends AppCompatActivity {
         rb1 = findViewById(R.id.radio_button1);
         rb2 = findViewById(R.id.radio_button2);
         rb3 = findViewById(R.id.radio_button3);
+        rb4 = findViewById(R.id.radio_button4);
         buttonConfirmNext = findViewById(R.id.button_confirm_next);
 
         //save default color in variable
@@ -73,7 +75,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //if answer is not answered yet
                 if(!answered){
-                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked()){
+                    if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked()){
                         checkAnswer();
                     } else{
                         Toast.makeText(QuizActivity.this, "Please select an answer", Toast.LENGTH_LONG).show();
@@ -90,6 +92,7 @@ public class QuizActivity extends AppCompatActivity {
         rb1.setTextColor(textColorDefaultRb);
         rb2.setTextColor(textColorDefaultRb);
         rb3.setTextColor(textColorDefaultRb);
+        rb4.setTextColor(textColorDefaultRb);
         rbGroup.clearCheck();
 
         //checks if we have reached the max. number of questions
@@ -100,6 +103,7 @@ public class QuizActivity extends AppCompatActivity {
             rb1.setText(currentQuestion.getWrongAnswer1());
             rb2.setText(currentQuestion.getWrongAnswer2());
             rb3.setText(currentQuestion.getWrongAnswer3());
+            rb4.setText(currentQuestion.getCorrectAnswer());
 
             questionCounter++;
             textViewQuestionCount.setText("Question: "+ questionCounter + "/" + questionCountTotal);
@@ -132,6 +136,7 @@ public class QuizActivity extends AppCompatActivity {
         rb1.setTextColor(Color.RED);
         rb2.setTextColor(Color.RED);
         rb3.setTextColor(Color.RED);
+        rb4.setTextColor(Color.RED);
         //change the correct button to Green to signify correct answer
 
         switch(currentQuestion.getQuestionID()){
@@ -149,6 +154,10 @@ public class QuizActivity extends AppCompatActivity {
                 rb3.setTextColor(Color.GREEN);
                 textViewQuestion.setText("Answer 3 is correct");
                 break;
+
+            case 4:
+                rb4.setTextColor(Color.GREEN);
+                textViewQuestion.setText("Answer 4 is correct");
         }
 
         // Now we need to change the button back to default colour for next question

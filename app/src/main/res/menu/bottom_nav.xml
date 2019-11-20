@@ -10,12 +10,9 @@
 
     <item
         android:id="@+id/activities_page"
-        android:title="Activities"
+        android:title="Practise Qs"
         android:icon="@drawable/list"
         />
-
-
-
 
 
 </menu>
