@@ -32,7 +32,7 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
 
         final Questions questionsAtPosition = questionsToAdapt.get(position);
         holder.questionIDTextView.setText(Integer.toString(questionsAtPosition.getQuestionID()));
-        holder.contextPassageTextView.setText(questionsAtPosition.getContextPassage());
+       // holder.contextPassageTextView.setText(questionsAtPosition.getContextPassage());
         holder.questionTextView.setText(questionsAtPosition.getQuestion());
         holder.correctAnswerRadioButton.setText(questionsAtPosition.getCorrectAnswer());
         holder.wrongAnswer1RadioButton.setText(questionsAtPosition.getWrongAnswer1());

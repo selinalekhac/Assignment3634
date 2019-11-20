@@ -59,7 +59,7 @@ public class Questions extends AppCompatActivity {
 
     public Questions (int questionID, String contextPassage, String question, String correctAnswer, String wrongAnswer1, String wrongAnswer2, String wrongAnswer3){
         this.questionID = questionID;
-        this.contextPassage = contextPassage;
+//        this.contextPassage = contextPassage;
         this.question = question;
         this.correctAnswer = correctAnswer;
         this.wrongAnswer1 = wrongAnswer1;
@@ -75,12 +75,12 @@ public class Questions extends AppCompatActivity {
         this.questionID = questionID;
     }
 
-    public String getContextPassage(){
-        return contextPassage;
-    }
-    public void setContextPassage(String contextPassage){
-        this.contextPassage = contextPassage;
-    }
+//    public String getContextPassage(){
+//        return contextPassage;
+//    }
+//    public void setContextPassage(String contextPassage){
+//        this.contextPassage = contextPassage;
+//    }
 
     public String getQuestion(){
         return question;
