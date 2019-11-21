@@ -28,11 +28,6 @@ public class HomepageFragment extends Fragment {
 
         final Button startButton = view.findViewById(R.id.start_button);
 
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
-        startButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                mp.start();
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override

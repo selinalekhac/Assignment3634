@@ -23,6 +23,8 @@ public class blankActivity extends AppCompatActivity {
 //        int answer1 = intent.getIntExtra("answer1", 0);
         String answer1 = getIntent().getStringExtra("answer1");
 
+
+
 //        Questions questions = new Questions();
 
 //        if (int x = 1){

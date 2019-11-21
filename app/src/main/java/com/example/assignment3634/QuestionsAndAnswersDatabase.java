@@ -16,6 +16,10 @@ public class QuestionsAndAnswersDatabase {
         return new ArrayList<Questions>((List) Arrays.asList(questions.values().toArray()));
     }
 
+    public static Questions getAnswer1 (String answer1){
+        return questions.get(answer1);
+    }
+
 
 
     private static final HashMap<Integer, Questions> questions = new HashMap<>();
