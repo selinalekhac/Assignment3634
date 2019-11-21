@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 
+import com.example.assignment3634.Questions;
 import com.example.assignment3634.QuestionsAdapter;
 import com.example.assignment3634.QuestionsAndAnswersDatabase;
 import com.example.assignment3634.R;
@@ -21,6 +23,11 @@ import com.example.assignment3634.R;
 public class FragmentQuestionRecycler extends Fragment {
 
     private RecyclerView recyclerView;
+//    private RadioButton rb1;
+//    private RadioButton rb2;
+//    private RadioButton rb3;
+//    private RadioButton rb4;
+
 
     public FragmentQuestionRecycler() {
         // Required empty public constructor

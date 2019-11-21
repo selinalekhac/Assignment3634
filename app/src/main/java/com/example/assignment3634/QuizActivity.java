@@ -77,10 +77,10 @@ public class QuizActivity extends AppCompatActivity {
                 if(!answered){
                     if (rb1.isChecked() || rb2.isChecked() || rb3.isChecked() || rb4.isChecked()){
                         checkAnswer();
-                    } else{
+                    } else {
                         Toast.makeText(QuizActivity.this, "Please select an answer", Toast.LENGTH_LONG).show();
                     }
-                } else{
+                } else {
                     showNextQuestion();
                 }
 
@@ -121,7 +121,7 @@ public class QuizActivity extends AppCompatActivity {
         //return the id of the button in variable 'rbSelected'
         RadioButton rbSelected = findViewById(rbGroup.getCheckedRadioButtonId());
         //turn index of radiobutton into an integer
-        int answerNr = rbGroup.indexOfChild(rbSelected) + 1;
+        int answerNr = rbGroup.indexOfChild(rbSelected)+1;
         //check if the selected answer is correct by matching it with the correct index value
         if(answerNr ==currentQuestion.getQuestionID()){
             score++;
@@ -131,6 +131,7 @@ public class QuizActivity extends AppCompatActivity {
         //outside as you always want to show solution
         showSolution();
     }
+
     //changing the colour of the buttons according to what is correct and what is wrong
     private void showSolution(){
         rb1.setTextColor(Color.RED);
@@ -158,6 +159,11 @@ public class QuizActivity extends AppCompatActivity {
             case 4:
                 rb4.setTextColor(Color.GREEN);
                 textViewQuestion.setText("Answer 4 is correct");
+                break;
+
+            case 5:
+                rb4.setTextColor(Color.GREEN);
+                textViewQuestion.setText("Answer 4 is correct");
         }
 
         // Now we need to change the button back to default colour for next question
@@ -171,6 +177,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private void finishQuiz(){
         finish();
+
     }
     }
 
