@@ -47,16 +47,16 @@ public class FragmentQuestionRecycler extends Fragment {
 
         Button checkAnswerButton = (Button) view.findViewById(R.id.checkanswer_id);
 
-//        checkAnswerButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//               // checkAnswer();
-////                Intent intent = new Intent(getActivity(), QuizActivity.class);
-////                intent.putExtra("questionID",1);
-////                startActivity(intent);
-//                Toast.makeText(getActivity(), "Text!", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        checkAnswerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // checkAnswer();
+//                Intent intent = new Intent(getActivity(), QuizActivity.class);
+//                intent.putExtra("questionID",1);
+//                startActivity(intent);
+                Toast.makeText(getActivity(), "Text!", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
         return view;
