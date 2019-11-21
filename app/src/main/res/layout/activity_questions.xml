@@ -6,18 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Questions">
 
-    <TextView
-        android:id="@+id/questionID_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/questionnumberid"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-<!--    <TextView-->
+    <!--    <TextView-->
 <!--        android:id="@+id/contextPassage_id"-->
 <!--        android:layout_width="335dp"-->
 <!--        android:layout_height="174dp"-->
@@ -28,18 +17,7 @@
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/questionID_id" />-->
 
-    <TextView
-        android:id="@+id/question_id"
-        android:layout_width="331dp"
-        android:layout_height="190dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/question"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionID_id" />
-
-<!--    <TextView-->
+    <!--    <TextView-->
 <!--        android:id="@+id/correctAnswer_id"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
@@ -83,6 +61,31 @@
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/wronganswer2_id" />-->
 
+    <TextView
+        android:id="@+id/questionID_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/questionnumberid"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/question_id"
+        android:layout_width="329dp"
+        android:layout_height="241dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/question"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionID_id" />
+
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
@@ -97,24 +100,28 @@
             android:id="@+id/correctAnswer_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18dp"
             android:text="@string/correctAnswer"/>
 
         <RadioButton
             android:id="@+id/wronganswer1_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18dp"
             android:text="@string/wronganswer1"/>
 
         <RadioButton
             android:id="@+id/wronganswer2_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18dp"
             android:text="@string/wronganswer2"/>
 
         <RadioButton
             android:id="@+id/wronganswer3_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="18dp"
             android:text="@string/wronganswer3"/>
 
 <!--            android:onClick="checkAnswer"-->
@@ -128,20 +135,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
         android:layout_marginLeft="140dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="@string/checkanswer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-    <TextView
-        android:id="@+id/results_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/Results"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkanswer_id" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

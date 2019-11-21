@@ -54,6 +54,7 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
         holder.wrongAnswer1RadioButton.setText(questionsAtPosition.getAnswer1());
         holder.wrongAnswer2RadioButton.setText(questionsAtPosition.getAnswer2());
         holder.wrongAnswer3RadioButton.setText(questionsAtPosition.getAnswer3());
+
         holder.checkAnswerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

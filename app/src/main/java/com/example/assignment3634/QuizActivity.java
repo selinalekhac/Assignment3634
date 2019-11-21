@@ -42,7 +42,7 @@ public class QuizActivity extends AppCompatActivity {
     private ColorStateList textColorDefaultRb;
 
     private CountDownTimer countDownTimer;
-    private long timeLeftInMilliSeconds;
+    private long timeLeft;
 
 
     private List<Questions> questionList;
@@ -76,14 +76,18 @@ public class QuizActivity extends AppCompatActivity {
         textColorDefaultRb = rb1.getTextColors();
 
 
+
         QuestionsAndAnswersDatabase questionsDatabase = new QuestionsAndAnswersDatabase();
         questionList = questionsDatabase.getAllQuestions();
         questionCountTotal = questionList.size();
-        //Collections.shuffle(questionList);
+
+        //will randomly shuffle questions so that each time a quiz is taken, user will get different questions
+        Collections.shuffle(questionList);
 
         showNextQuestion();
         //lock button
 
+        //set what will happen if user clicks next without selecting an answer
         buttonConfirmNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,7 +135,7 @@ public class QuizActivity extends AppCompatActivity {
             //start countdown when we show first question
 
             //setting timer to 30 seconds
-            timeLeftInMilliSeconds = COUNTDOWN_IN_MILLIS;
+            timeLeft = COUNTDOWN_IN_MILLIS;
             startCountDown();
         } else{
             finishQuiz();
@@ -140,17 +144,17 @@ public class QuizActivity extends AppCompatActivity {
     }
     //method to start count down timer
     private void startCountDown(){
-        countDownTimer = new CountDownTimer(timeLeftInMilliSeconds, 1000) {
+        countDownTimer = new CountDownTimer(timeLeft, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-            timeLeftInMilliSeconds = millisUntilFinished;
+            timeLeft = millisUntilFinished;
             updateCountDownText();
             }
 
             @Override
             public void onFinish() {
                 //To make sure 0:00 seconds is displayed on timer when it runs out
-                timeLeftInMilliSeconds =0;
+                timeLeft =0;
                 updateCountDownText();
                 checkAnswer();
             }
@@ -159,9 +163,9 @@ public class QuizActivity extends AppCompatActivity {
     //update count down text method. Will be called everytime onTick method is called which is 1 every second
     private void updateCountDownText(){
         // need to get seconds
-        int minutes = (int)(timeLeftInMilliSeconds/1000) / 60;
+        int minutes = (int)(timeLeft/1000) / 60;
         // we only get what is left after dividing by 60
-        int seconds = (int)(timeLeftInMilliSeconds/1000)% 60;
+        int seconds = (int)(timeLeft/1000)% 60;
 
         String timeFormatted = String.format(Locale.getDefault(),"%02d:%02d", minutes, seconds);
 
@@ -196,8 +200,8 @@ public class QuizActivity extends AppCompatActivity {
         rb2.setTextColor(Color.RED);
         rb3.setTextColor(Color.RED);
         rb4.setTextColor(Color.RED);
-        //change the correct button to Green to signify correct answer
 
+        //change only the correct answer to Green to signify correct answer
         switch(currentQuestion.getAnswerNr()){
             case 1:
                 rb1.setTextColor(Color.GREEN);
@@ -221,7 +225,7 @@ public class QuizActivity extends AppCompatActivity {
 
         }
 
-        // Now we need to change the button back to default colour for next question
+        // Now we need to change the button back to default text for next question
         if(questionCounter<questionCountTotal){
             buttonConfirmNext.setText("Next");
 

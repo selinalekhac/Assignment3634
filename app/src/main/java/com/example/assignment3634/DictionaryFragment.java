@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.android.volley.toolbox.StringRequest;
 import com.example.assignment3634.R;
 
 import org.w3c.dom.Text;
@@ -27,6 +28,8 @@ public class DictionaryFragment extends Fragment {
     private TextView showDef;
     String url;
 
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,12 +38,14 @@ public class DictionaryFragment extends Fragment {
         showDef = view.findViewById(R.id.textView2);
         enterWord =  view.findViewById(R.id.editText);
         url = dictionaryEntries();
+
         Button defineButton = (Button) view.findViewById(R.id.button);
 
         defineButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DictionaryRequest dictionaryRequest = new DictionaryRequest(getActivity(), showDef);
+
                 url = dictionaryEntries();
                 dictionaryRequest.execute(url);
             }
@@ -53,13 +58,14 @@ public class DictionaryFragment extends Fragment {
     private String dictionaryEntries() {
     final String language = "en-gb";
     String word = enterWord.getText().toString();
-    final String fields = "definitions";
+    String fields = "definitions";
     final String word_id = word.toLowerCase();
     final String strictMatch = "false";
         return "https://od-api.oxforddictionaries.com:443/api/v2/entries/" + language + "/" + word + "?" + "fields=" + fields + "&strictMatch=" + strictMatch;
 
 
 
-}
+    }
+
 
 }

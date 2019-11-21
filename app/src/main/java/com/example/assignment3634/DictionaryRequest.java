@@ -22,6 +22,7 @@ public class DictionaryRequest extends AsyncTask<String, Integer, String> {
     TextView showDef;
 
 
+
     DictionaryRequest(Context context, TextView tV) {
         this.context = context;
         this.showDef = tV;
@@ -64,9 +65,8 @@ public class DictionaryRequest extends AsyncTask<String, Integer, String> {
     protected void onPostExecute (String s){
         super.onPostExecute(s);
 
-        //Toast.makeText(context, s, Toast.LENGTH_SHORT).show();
+      String def;
 
-        String def;
         try {
             JSONObject js = new JSONObject(s);
             JSONArray results = js.getJSONArray("results");
@@ -84,9 +84,8 @@ public class DictionaryRequest extends AsyncTask<String, Integer, String> {
             JSONArray de = d.getJSONArray("definitions");
 
             def =  de.getString(0);
-
-
             showDef.setText(def);
+
 
         } catch (JSONException e) {
             e.printStackTrace();

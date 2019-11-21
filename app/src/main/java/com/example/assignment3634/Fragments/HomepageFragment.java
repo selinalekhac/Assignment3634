@@ -1,6 +1,8 @@
 package com.example.assignment3634.Fragments;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,29 +21,28 @@ import com.example.assignment3634.R;
 public class HomepageFragment extends Fragment {
 
 
-
-
-
-
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-
         View view = inflater.inflate(R.layout.homepage, container, false);
 
-        Button playButton = (Button) view.findViewById(R.id.start_button);
+        final Button startButton = view.findViewById(R.id.start_button);
 
-        playButton.setOnClickListener(new View.OnClickListener() {
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sample);
+        startButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                mp.start();
+
+        startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 moveToNext();
-//                Intent intent = new Intent(getActivity(), QuizActivity.class);
-//                intent.putExtra("questionID",1);
-//                startActivity(intent);
+                startButton.setBackgroundColor(Color.GREEN);
                 Toast.makeText(getActivity(), "Quiz has started", Toast.LENGTH_LONG).show();
+
             }
+
         });
 
         return view;

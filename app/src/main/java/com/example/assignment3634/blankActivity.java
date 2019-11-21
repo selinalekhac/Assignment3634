@@ -25,26 +25,26 @@ public class blankActivity extends AppCompatActivity {
 
 //        Questions questions = new Questions();
 
-        if (int x = 1){
-            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(x);
-            words = findViewById(R.id.textView);
-            words.setText(questions.getAnswer1());
-        } else (int b = 2){
-            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(x);
-            words = findViewById(R.id.textView);
-            words.setText(questions.getAnswer1());
-        }
-
-        for (int x =1;x<5;x++)
-        {
-            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(x);
-            words = findViewById(R.id.textView);
-
-            words.setText(questions.getAnswer1());
-        }
-
-
-        ;
+//        if (int x = 1){
+//            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(x);
+//            words = findViewById(R.id.textView);
+//            words.setText(questions.getAnswer1());
+//        } else (int b = 2){
+//            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(x);
+//            words = findViewById(R.id.textView);
+//            words.setText(questions.getAnswer1());
+//        }
+//
+//        for (int x =1;x<5;x++)
+//        {
+//            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(x);
+//            words = findViewById(R.id.textView);
+//
+//            words.setText(questions.getAnswer1());
+//        }
+//
+//
+//        ;
 
 
 
