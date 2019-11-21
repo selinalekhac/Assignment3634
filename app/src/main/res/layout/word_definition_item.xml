@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/definitions_constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,10 +10,10 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="5dp"
 
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="96dp"
         android:text="Find"
         app:layout_constraintStart_toEndOf="@+id/editText"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,5 +42,17 @@
         android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <ImageView
+        android:id="@+id/shareButton"
+        android:layout_width="35dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/sharebutton"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sharebutton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,23 +25,36 @@ public class blankActivity extends AppCompatActivity {
 
 //        Questions questions = new Questions();
 
-        if (int x = 1){
-            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(x);
-            words = findViewById(R.id.textView);
-            words.setText(questions.getAnswer1());
-        } else (int b = 2){
-            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(x);
-            words = findViewById(R.id.textView);
-            words.setText(questions.getAnswer1());
-        }
+//        int x = QuestionsAndAnswersDatabase.getQuestionsById(0); // the 0 should be the question id
+//        switch (x){
+//            case 1:
+//                words = findViewById(R.id.textView);
+//                words.setText(QuestionsAndAnswersDatabase.getQuestionsById(x));
+//        }
+//
+//        if (int a = 1){
+//            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(a);
+//            words = findViewById(R.id.textView);
+//            words.setText(questions.getAnswer1());
+//        } else (int a = 2){
+//            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(a);
+//            words = findViewById(R.id.textView);
+//            words.setText(questions.getAnswer1());
+//        } else (int c = 3){
+//            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(c);
+//            words = findViewById(R.id.textView);
+//            words.setText(questions.getAnswer1());
+//        }
 
-        for (int x =1;x<5;x++)
-        {
-            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(x);
-            words = findViewById(R.id.textView);
 
-            words.setText(questions.getAnswer1());
-        }
+
+//        for (int x =1;x<5;x++)
+//        {
+//            Questions questions = QuestionsAndAnswersDatabase.getQuestionsById(x);
+//            words = findViewById(R.id.textView);
+//
+//            words.setText(questions.getAnswer1());
+//        }
 
 
         ;
