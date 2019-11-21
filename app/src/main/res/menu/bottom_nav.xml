@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:andriod="http://schemas.android.com/tools">
 
     <item
         android:id="@+id/home_page"
@@ -14,5 +15,9 @@
         android:icon="@drawable/list"
         />
 
+    <item
+        android:id="@+id/dictionary_page"
+        android:title="Dictionary"
+        android:icon="@drawable/search"/>
 
 </menu>

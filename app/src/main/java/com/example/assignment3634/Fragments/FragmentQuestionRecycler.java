@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.example.assignment3634.Questions;
 import com.example.assignment3634.QuestionsAdapter;
@@ -23,11 +25,6 @@ import com.example.assignment3634.R;
 public class FragmentQuestionRecycler extends Fragment {
 
     private RecyclerView recyclerView;
-//    private RadioButton rb1;
-//    private RadioButton rb2;
-//    private RadioButton rb3;
-//    private RadioButton rb4;
-
 
     public FragmentQuestionRecycler() {
         // Required empty public constructor
@@ -48,10 +45,32 @@ public class FragmentQuestionRecycler extends Fragment {
         questionsAdapter.setData(QuestionsAndAnswersDatabase.getAllQuestions());
         recyclerView.setAdapter(questionsAdapter);
 
+        Button checkAnswerButton = (Button) view.findViewById(R.id.checkanswer_id);
+
+//        checkAnswerButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//               // checkAnswer();
+////                Intent intent = new Intent(getActivity(), QuizActivity.class);
+////                intent.putExtra("questionID",1);
+////                startActivity(intent);
+//                Toast.makeText(getActivity(), "Text!", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
+
         return view;
     } // this curly bracket is for the onCreateView
 
+//    public void checkAnswer() {
+//        RadioButton rbSelected = v.findViewById(radioGroup.getCheckedRadioButtonId());
+//        int answerNr = radioGroup.indexOfChild(rbSelected) + 1;
+//        //check if the selected answer is correct by matching it with the correct index value
+//        if (answerNr == Questions.getQuestionID) {
+//
+//
+//        }
 
 
+    }
 
-}

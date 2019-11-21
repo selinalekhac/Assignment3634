@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,11 +18,18 @@ import com.example.assignment3634.R;
 
 public class HomepageFragment extends Fragment {
 
+
+
+
+
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.homepage, container, false);
 
+
+        View view = inflater.inflate(R.layout.homepage, container, false);
 
         Button playButton = (Button) view.findViewById(R.id.start_button);
 
@@ -44,10 +52,6 @@ public class HomepageFragment extends Fragment {
         startActivity(intent);
     }
 
-//    public void onClickToQuiz(View v) {
-//
-//
-//    }
 
 
 
