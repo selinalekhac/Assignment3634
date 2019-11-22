@@ -18,7 +18,7 @@ public class Questions extends AppCompatActivity {
     private String answer2; //an incorrect answer
     private String answer3; // another incorrect answer
     private String answer4; // another incorrect answer
-    private int answerNr;
+    private int answerNumber;
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     private TextView textView;
@@ -63,7 +63,7 @@ public class Questions extends AppCompatActivity {
         this.answer2= answer2;
         this.answer3= answer3;
         this.answer4= answer4;
-        this.answerNr = answerNr;
+        this.answerNumber = answerNr;
 
     }
 
@@ -129,12 +129,12 @@ public class Questions extends AppCompatActivity {
         this.answer4 = answer4;
     }
 
-    public int getAnswerNr() {
-        return answerNr;
+    public int getAnswerNumber() {
+        return answerNumber;
     }
 
-    public void setAnswerNr(int answerNr) {
-        this.answerNr = answerNr;
+    public void setAnswerNumber(int answerNumber) {
+        this.answerNumber = answerNumber;
     }
 
     public RadioGroup getRadioGroup() {

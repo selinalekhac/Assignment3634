@@ -44,8 +44,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/corners4"
         android:gravity="center"
-
-        android:text="Points"
+        android:text="@string/points_title"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/player_name" />
@@ -59,13 +58,13 @@
         android:layout_marginRight="92dp"
         android:background="@drawable/corners5"
         android:gravity="center"
-        android:text="38"
+        android:text="@string/number_of_points"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/player_name" />
 
     <TextView
-        android:id="@+id/number_of_points4"
+        android:id="@+id/number_of_words_searched"
         android:layout_width="74dp"
         android:layout_height="40dp"
         android:layout_marginTop="52dp"
@@ -73,10 +72,10 @@
         android:layout_marginRight="92dp"
         android:background="@drawable/corners3"
         android:gravity="center"
-        android:text="9"
+        android:text="@string/number_words_searched"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/number_of_points3" />
+        app:layout_constraintTop_toTopOf="@+id/number_of_hours_played" />
 
     <TextView
         android:id="@+id/words_searched"
@@ -87,28 +86,27 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/corners2"
         android:gravity="center"
-        android:text="Words Searched"
+        android:text="@string/searched_words"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hours_played" />
+        app:layout_constraintTop_toBottomOf="@+id/hours_played_title" />
 
     <TextView
-        android:id="@+id/hours_played"
+        android:id="@+id/hours_played_title"
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
         android:layout_marginTop="12dp"
-
         android:background="@drawable/corners"
         android:gravity="center"
-        android:text="Hours Played"
+        android:text="@string/hours_played_title"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/points_title" />
 
     <TextView
-        android:id="@+id/number_of_points3"
+        android:id="@+id/number_of_hours_played"
         android:layout_width="87dp"
         android:layout_height="40dp"
         android:layout_marginTop="12dp"
@@ -116,7 +114,7 @@
         android:layout_marginRight="92dp"
         android:background="@drawable/corners1"
         android:gravity="center"
-        android:text="2H 38M"
+        android:text="@string/number_of_hours_played"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/number_of_points" />
@@ -129,7 +127,7 @@
         android:layout_marginLeft="124dp"
         android:layout_marginTop="28dp"
         android:onClick="onClickToQuiz"
-        android:text="Take Quiz"
+        android:text="@string/buttonTitle"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/words_searched" />

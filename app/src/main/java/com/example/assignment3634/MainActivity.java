@@ -29,14 +29,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         Fragment fragment = new HomepageFragment();
+
         swapFragment(fragment);
-
-
-
-
 
         //Navigation Bar Setup
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -48,10 +43,12 @@ public class MainActivity extends AppCompatActivity {
                     Fragment fragment = new HomepageFragment();
                     swapFragment(fragment);
                     return true;
+
                 } else if (menuItem.getItemId() == R.id.activities_page) {
                     Fragment fragment = new FragmentQuestionRecycler();
                     swapFragment(fragment);
                     return true;
+
                 } else if (menuItem.getItemId() ==R.id.dictionary_page){
                     Fragment fragment = new DictionaryFragment();
                     swapFragment(fragment);
@@ -63,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
         private void swapFragment(Fragment fragment){
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -71,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.commit();
 
         }
-
-
 
     }
 

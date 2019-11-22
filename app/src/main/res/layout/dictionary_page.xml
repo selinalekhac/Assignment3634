@@ -7,7 +7,7 @@
         android:id="@+id/page_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dictionary"
+        android:text="@string/dictionary"
         android:textColor="@android:color/black"
         android:padding="10dp"
         android:textSize="18sp"
@@ -15,7 +15,7 @@
 
     <EditText
         android:id="@+id/searchBar"
-       android:text="Search Words"
+       android:text="@string/search_words"
          android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp" />

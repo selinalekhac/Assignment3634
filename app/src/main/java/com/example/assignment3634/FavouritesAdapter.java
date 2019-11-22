@@ -58,7 +58,6 @@ public class FavouritesAdapter extends RecyclerView.Adapter<FavouritesAdapter.Fa
             favouriteWord = itemView.findViewById(R.id.favourite_word);
             wordDefinition = itemView.findViewById(R.id.word_definition);
 
-
         }
     }
 }

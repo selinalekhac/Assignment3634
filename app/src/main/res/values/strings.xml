@@ -16,5 +16,30 @@
     <string name="player_name">Leo Floyd</string>
     <string name ="sharebutton">Share Button</string>
     <string name = "emptyActivity">We intended for the QuestionID to be passed from previous recyclerView fragment, to new activity so that it would display all the relevant details about that question (Correct answer and justifications). </string>
+    <string name = "dictionary"> Dictionary </string>
+    <string name ="search_words">Search Word</string>
+    <string name ="favourite_word">Favourite Word</string>
+    <string name ="definition">Definition</string>
+    <string name ="points_title">Points</string>
+    <string name ="number_of_points">38</string>
+    <string name ="number_words_searched">11</string>
+    <string name ="searched_words">Number of Words Searched</string>
+    <string name ="hours_played_title">Hours Played</string>
+    <string name ="number_of_hours_played">2h 27m</string>
+    <string name ="scoreText">Quiz Score: 0</string>
+    <string name ="questionNumber">Question: 1/x </string>
+    <string name ="startingCounter">00:45</string>
+    <string name ="questionToAsk">Question to be asked</string>
+    <string name ="radioButton1">Option 1</string>
+    <string name ="radioButton2">Option 2</string>
+    <string name ="radioButton3">Option 3</string>
+    <string name ="radioButton4">Option 4</string>
+    <string name ="buttonConfirm">Confirm</string>
+    <string name ="buttonFind">Define</string>
+    <string name ="defineWord">Define word</string>
+    <string name ="definitionIs">The definition is: </string>
+
+
+
 
 </resources>

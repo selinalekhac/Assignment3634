@@ -18,13 +18,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-//if this doesnt work
-public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.QuestionsViewHolder> {
 
-     private ArrayList<Questions> questionsToAdapt;
-    public void setData(ArrayList<Questions> questionsToAdapt){
-        this.questionsToAdapt = questionsToAdapt;
-    }
+    public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.QuestionsViewHolder> {
+
+         private ArrayList<Questions> questionsToAdapt;
+
+         public void setData(ArrayList<Questions> questionsToAdapt){
+         this.questionsToAdapt = questionsToAdapt;
+         }
 
     @NonNull
     @Override
@@ -60,7 +61,7 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
             public void onClick(View view) {
                 Context context = view.getContext();
                 Intent intent = new Intent(context, blankActivity.class );
-               intent.putExtra("answer1", questionsAtPosition.getAnswer1());
+                intent.putExtra("answer1", questionsAtPosition.getAnswer1());
                 context.startActivity(intent);
             }
         });
@@ -96,8 +97,6 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
             wrongAnswer2RadioButton = v.findViewById(R.id.wronganswer2_id);
             wrongAnswer3RadioButton = v.findViewById(R.id.wronganswer3_id);
             checkAnswerButton = v.findViewById(R.id.checkanswer_id);
-
-
 
         }
     }

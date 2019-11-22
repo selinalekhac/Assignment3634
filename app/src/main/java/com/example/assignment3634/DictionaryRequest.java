@@ -3,29 +3,25 @@ package com.example.assignment3634;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
-
 import javax.net.ssl.HttpsURLConnection;
 
+//Code Referencing: https://developer.oxforddictionaries.com/documentation/getting_started - used to set up and send GET request to API
 public class DictionaryRequest extends AsyncTask<String, Integer, String> {
 
     String myurl;
     Context context;
-    TextView showDef;
-
+    TextView showDefinition;
 
 
     DictionaryRequest(Context context, TextView tV) {
         this.context = context;
-        this.showDef = tV;
+        this.showDefinition = tV;
     }
 
     @Override
@@ -45,6 +41,7 @@ public class DictionaryRequest extends AsyncTask<String, Integer, String> {
 
             // read the output from the server
             BufferedReader reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+
             StringBuilder stringBuilder = new StringBuilder();
 
             String line = null;
@@ -54,10 +51,11 @@ public class DictionaryRequest extends AsyncTask<String, Integer, String> {
 
             return stringBuilder.toString();
 
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-            return e.toString();
+            }
+             catch (Exception e) {
+                 e.printStackTrace();
+
+             return e.toString();
         }
     }
 
@@ -69,22 +67,27 @@ public class DictionaryRequest extends AsyncTask<String, Integer, String> {
 
         try {
             JSONObject js = new JSONObject(s);
+
             JSONArray results = js.getJSONArray("results");
 
             JSONObject lEntries = results.getJSONObject(0);
+
             JSONArray laArray = lEntries.getJSONArray("lexicalEntries");
 
             JSONObject entries = laArray.getJSONObject(0);
+
             JSONArray e = entries.getJSONArray("entries");
 
             JSONObject jsonObject = e.getJSONObject(0);
+
             JSONArray sensesArray = jsonObject.getJSONArray("senses");
 
             JSONObject d = sensesArray.getJSONObject(0);
+
             JSONArray de = d.getJSONArray("definitions");
 
             def =  de.getString(0);
-            showDef.setText(def);
+            showDefinition.setText(def);
 
 
         } catch (JSONException e) {
