@@ -38,8 +38,7 @@
     <string name ="buttonFind">Define</string>
     <string name ="defineWord">Define word</string>
     <string name ="definitionIs">The definition is: </string>
-
-
+    <string name="buttonTitle">Take Quiz</string>
 
 
 </resources>
