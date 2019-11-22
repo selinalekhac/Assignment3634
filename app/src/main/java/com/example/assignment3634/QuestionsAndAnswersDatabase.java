@@ -48,7 +48,7 @@ public class QuestionsAndAnswersDatabase {
                 "Nervous",
                 "Moody",
                 "Broody",
-                1
+                2
 
         ));
 
@@ -61,7 +61,7 @@ public class QuestionsAndAnswersDatabase {
                 "Happy",
                 "Excited",
                 "Cheerful",
-                1
+                4
         ));
 
         questions.put(4, new Questions(
@@ -73,7 +73,7 @@ public class QuestionsAndAnswersDatabase {
                 "Keen",
                 "Dreamy",
                 "Obssessed",
-                1
+                2
         ));
 
         questions.put(5, new Questions(
@@ -88,6 +88,138 @@ public class QuestionsAndAnswersDatabase {
                 "Stressed",
                 1
         ));
+
+        questions.put(6, new Questions(
+                6,
+
+                "",
+                "Antonio was working on an assignment that he had due at the end of the week. Despite having received the assignment brief at the beginning of the term, he forgot about it until the week before." +
+                        "How do you think Antonio is feeling now that he is under extreme pressure to finish? ",
+                "Frustrated",
+                "Irritable",
+                "Jittery",
+                "Restless",
+                4
+        ));
+
+        questions.put(7, new Questions(
+                7,
+
+                "",
+                "Tracy is about to leave her home for the airport when she realises she has not checked in to her flight yet. She knows there is going to be traffic and needs to leave now." +
+                        "How do you think this predicament is making Tracy feel? ",
+                "Distressed",
+                "Flustered",
+                "Hyper",
+                "Fearful",
+                2
+        ));
+
+        questions.put(8, new Questions(
+                8,
+
+                "",
+                "Daniel has been at university working late on an final project due. Since he stayed till 4am without telling his parents they had a few words to say to him the next morning." +
+                        "How do you think think his parents were feeling the night before? ",
+                "Concerned",
+                "Careful",
+                "Surprised",
+                "Disgusted",
+                1
+        ));
+
+        questions.put(9, new Questions(
+                9,
+
+                "",
+                "Rico recently got into a bike accident and damaged his bicycle badly. He was hoping to fix it however after several attempts he gave up." +
+                        "What was Rico emotions after these attempts at fixing his bicycle?",
+                "Unsatisfied",
+                "Empathetic",
+                "Infuriated",
+                "Troubled",
+                3
+        ));
+
+        questions.put(10, new Questions(
+                10,
+
+                "",
+                "On the way out of Coles, Sally saw an elderly woman walking with several shopping bags. She gave her a helping hand and carried them to her car." +
+                        "How do you think the elderly woman felt?",
+                "Warm",
+                "Shy",
+                "Serene",
+                "Appreciative",
+                4
+        ));
+
+        questions.put(11, new Questions(
+                11,
+
+                "",
+                "On the train, the guards were checking train passes. Harry was travelling with a concession Opal however did not have his student ID card." +
+                        "What was Harry's emotional reaction when they approached him?",
+                "Scared",
+                "Worried",
+                "Melancholy",
+                "Bitter",
+                1
+        ));
+
+        questions.put(12, new Questions(
+                12,
+
+                "",
+                "Jeremy was waiting at the opening of Matcha Matcha a new bubble tea store for hours. " +
+                        "How do you think he felt when he was told the store had sold out of bubble tea?",
+                "Cranky",
+                "Sullen",
+                "Disappointed",
+                "Tense",
+                3
+        ));
+
+        questions.put(13, new Questions(
+                13,
+
+                "",
+                "It was the first time in a while that Roger went for a run and he was not used to the Summer heatwave that was rolling through Sydney." +
+                        "What were his emotions when he got back home from the run?",
+                "Tired",
+                "Exhausted",
+                "Energised",
+                "Lazy",
+                2
+        ));
+
+        questions.put(14, new Questions(
+                14,
+
+                "",
+                "William was walking towards the bus stop when he realised the bus had arrived earlier than expected. He ran but the bus left without him." +
+                        "How do you think William felt about missing the bus?",
+                "Irritated",
+                "Testy",
+                "Devastated",
+                "Outraged",
+                4
+        ));
+
+        questions.put(15, new Questions(
+                15,
+
+                "",
+                "Paula just arrived at the airport to pick up her friend who had just gotten back from exchange. She had been waiting for 30 minutes when she saw her friend." +
+                        "What was Paula feeling when she saw her friend walking through the Arrival Gates?",
+                "Ecstatic",
+                "Content",
+                "Satisfied",
+                "Gratified",
+                1
+        ));
+
+
 
     } //this curly bracket is for static
 
