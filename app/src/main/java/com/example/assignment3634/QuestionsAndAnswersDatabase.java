@@ -55,8 +55,8 @@ public class QuestionsAndAnswersDatabase {
         questions.put(3, new Questions(
                 3,
                 "",
-                "Kimberly graduated from university 2 years ago with an information systems degree however, she has been struggling to find work ever since and has been working short term temporary jobs. "+
-                        "                                                     " +"How do you think Kimberly feels after the phone call?",
+                "Kimberly graduated from university 2 years ago with an information systems degree however, she has been struggling to find work ever since and has been working short term temporary jobs. "
+                         +"How do you think Kimberly feels about her situation?",
                 "Elated",
                 "Happy",
                 "Excited",

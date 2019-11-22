@@ -79,7 +79,7 @@ public class QuizActivity extends AppCompatActivity {
 
         QuestionsAndAnswersDatabase questionsDatabase = new QuestionsAndAnswersDatabase();
         questionList = questionsDatabase.getAllQuestions();
-        questionCountTotal = questionList.size();
+        questionCountTotal = 5;
 
         //will randomly shuffle questions so that each time a quiz is taken, user will get different questions
         Collections.shuffle(questionList);
